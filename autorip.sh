@@ -12,15 +12,15 @@ fi
 clear
 dir1=""
 member=VolumeChanged
-echo "Welcom"
+echo "Welcome"
 echo "save to: "
 read dir1
-#while [ 1 == 1 ]
-#do
 dbus-monitor --profile "member='$member'" |
 while read -r line; 
 do
     echo "mounted"
-    makemkvcon --minlength=1200 mkv disc:0 all $dir1
+    vol1=`volname /dev/sr0`
+    mkdir $dir1/$vol1
+    makemkvcon --minlength=1200 mkv disc:0 all $dir1/$vol1
 done
 
