@@ -11,6 +11,6 @@ dbus-monitor --profile "member='$member'" |
 while read -r line; 
 do
     echo "mounted"
-    makemkvcon mkv disc:0 all $dir1
+    makemkvcon --minlength=1200 mkv disc:0 all $dir1
 done
 
