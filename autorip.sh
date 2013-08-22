@@ -9,11 +9,18 @@ echo "Error: makemkvcon is not installed."
     exit 1
 fi
 
+if [ $# != 1 ]
+then
+    echo "Error: too many arguments."
+    exit 1
+fi
+
 clear
 dir1=""
-member=VolumeChanged
-echo "Welcom"
-echo "save to: "
+Member=VolumeChanged
+echo "Welcome to autorip."
+echo "Directory to save to: "
+
 read dir1
 #while [ 1 == 1 ]
 #do
@@ -23,4 +30,3 @@ do
     echo "mounted"
     makemkvcon --minlength=1200 mkv disc:0 all $dir1
 done
-
