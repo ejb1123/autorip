@@ -1,4 +1,14 @@
 #!/bin/bash
+
+if [ -x /usr/bin/makemkvcon ]
+then
+echo "makemkvcon found."
+else
+echo "Error: makemkvcon is not installed."
+    echo "Please install it or contact your system administrator."
+    exit 1
+fi
+
 clear
 dir1=""
 member=VolumeChanged
