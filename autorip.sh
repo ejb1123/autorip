@@ -17,7 +17,7 @@ fi
 
 clear
 dir1=""
-Member=VolumeChanged
+member=VolumeChanged
 echo "Welcome to autorip."
 echo "Directory to save to: "
 
