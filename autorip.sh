@@ -4,7 +4,11 @@ if [ -x /usr/bin/makemkvcon ]
 then
 echo "makemkvcon found."
 else
-echo "Error: makemkvcon is not installed."
+    echo "Autorip version .1, Copyright (C) 2013 E. Bevenour" 
+    echo "Autorip comes with ABSOLUTELY NO WARRANTY; for details type `show w'."
+    echo "This is free software, and you are welcome to redistribute it"
+    echo "under certain conditions; type `show c' for details."
+    echo "Error: makemkvcon is not installed."
     echo "Please install it or contact your system administrator."
     exit 1
 fi
@@ -16,6 +20,10 @@ then
 fi
 
 clear
+    echo "Autorip version .1, Copyright (C) 2013 E. Bevenour" 
+    echo "Autorip comes with ABSOLUTELY NO WARRANTY; for details type `show w'."
+    echo "This is free software, and you are welcome to redistribute it"
+    echo "under certain conditions; type `show c' for details."
 dir1=""
 member=VolumeChanged
 echo "Welcome to autorip."
