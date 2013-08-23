@@ -9,12 +9,21 @@ echo "Error: makemkvcon is not installed."
     exit 1
 fi
 
+if [ $# != 1 ]
+then
+    echo "Error: too many arguments."
+    exit 1
+fi
+
 clear
 dir1=""
 member=VolumeChanged
-echo "Welcome"
-echo "save to: "
+echo "Welcome to autorip."
+echo "Directory to save to: "
+
 read dir1
+#while [ 1 == 1 ]
+#do
 dbus-monitor --profile "member='$member'" |
 while read -r line; 
 do
