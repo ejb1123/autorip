@@ -27,17 +27,24 @@ while [ 1 == 1 ];
 	then
 		echo "Mounted."
 		mkdir -p $dir1/$vol1
-		makemkvcon --minlength=1200 mkv disc:0 all $dir1/$vol1
+		#makemkvcon --minlength=1200 mkv disc:0 all $dir1/$vol1
 		dir2="$dir1/$vol1/title.mkv"
 		if [[ -e $dir1/$vol1/title00.mkv ]];
 		then
 			mv $dir1/$vol1/title00.mkv $dir1/$vol1/$vol1.mkv
 		fi
-	sudo umount /dev/sr0
-	sudo eject /dev/sr0
-	sleep 10
-	else
-		echo "No disc mounted."
+		if [ $GDMSESSION = "gnome" ]
+		then
+			notify-send -t 6000 -a autorip -i /usr/share/icons/gnome/256x256/devices/media-optical.png "$vol1.mkv is ripped"
+		elif [ $GDMSESSION = "kde" ]
+		then
+			kdialog --passivepopup "$vol1.mkv is ripped" 3
+		fi
+		sudo umount /dev/sr0
+		sudo eject /dev/sr0
 		sleep 10
+		else
+			echo "No disc mounted."
+			sleep 10
 	fi
 done
