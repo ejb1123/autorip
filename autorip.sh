@@ -35,10 +35,10 @@ while [ 1 == 1 ];
 		fi
 		if [ $GDMSESSION = "gnome" ]
 		then
-			notify-send -t 6000 -a autorip -i /usr/share/icons/gnome/256x256/devices/media-optical.png "$vol1.mkv is ripped"
-		elif [ $GDMSESSION = "kde" ]
+			notify-send -t 6000 -a autorip -i /usr/share/icons/gnome/256x256/devices/media-optical.png "$vol1 is ripped"
+		elif [ $GDMSESSION = "kde-plasma" ]
 		then
-			kdialog --passivepopup "$vol1.mkv is ripped" 6
+			notify-send -t 6000 -a autorip -i /usr/share/icons/default.kde4/128x128/actions/tools-rip-video-dvd.png "Rip Status" "$vol1 is ripped"
 		fi
 		sudo umount /dev/sr0
 		sudo eject /dev/sr0
