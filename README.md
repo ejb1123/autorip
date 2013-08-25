@@ -8,7 +8,7 @@ To do
 
  - ~~Desktop Notifications~~
  - Hand Brake conversion handover
- - Add a Windows Power Shell script
+ - ~~Add a Windows Power Shell script~~
  - Add mac script
  - ~~Disc detection~~
  - Specify file name to save as
