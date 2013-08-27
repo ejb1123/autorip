@@ -15,3 +15,7 @@ To do
 
 ---
 My email: [ej@ejb1123.tk](mailto:ej@ejb1123.tk)
+
+Please donate if you like this project.
+
+Bitcoin: 1Dk21ixijwJ6chANJQdNEdSPGr1t44XP3Z
