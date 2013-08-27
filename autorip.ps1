@@ -48,7 +48,7 @@
                         {
                         }
                         Show-BalloonTip -Title “Autorip” -MessageType Info -Message “$volumeName is ripped” -Duration 10000
-                        ejectcd
+                        Eject -id "$deviceId"
                     }
                }
             start-sleep -seconds 10
@@ -92,7 +92,14 @@ $balloon.Visible = $true
 $balloon.ShowBalloonTip($Duration)            
 
 }
-
+function Eject
+{ 
+    param($id)
+    $sa = new-object -com Shell.Application 
+    $sa.Namespace(17).ParseName($id).InvokeVerb("Eject") 
+    [System.Runtime.Interopservices.Marshal]::ReleaseComObject($sa) | Out-Null
+    Remove-Variable sa 
+} 
  
 # Execute this function
 Get-ADComputerCDRomInfo
