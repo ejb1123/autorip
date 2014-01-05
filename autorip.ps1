@@ -14,7 +14,7 @@
     #with this program; if not, write to the Free Software Foundation, Inc.,
     #51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-﻿Function Get-ADComputerCDRomInfo
+Function Get-ADComputerCDRomInfo
 { 
         # Function variables
         $deviceId = ""
@@ -63,7 +63,7 @@
                         finally
                         {
                         }
-                        Show-BalloonTip -Title “Autorip” -MessageType Info -Message “$volumeName is ripped” -Duration 10000
+                        Show-BalloonTip -Title 'Autorip' -MessageType Info -Message "$volumeName is ripped" -Duration 10000
                         Eject -id "$deviceId"
                     }
                }
