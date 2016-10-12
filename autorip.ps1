@@ -55,7 +55,7 @@ Function Get-ADComputerCDRomInfo
                         echo 'Mounted'
                         $dir1 = "C:\library\rips\$volumeName"
                         New-Item $dir1 -type directory -force
-                        invoke-expression "$makemkvpath\makemkvcon.exe --minlength=1200 mkv disc:0 all C:\library\rips\$volumename\"
+                        invoke-expression "& '$makemkvpath\makemkvcon.exe' --minlength=1200 mkv disc:0 all C:\library\rips\$volumename\"
                         try
                         {
                         mv $dir1\title00.mkv $dir1\$volumeName.mkv
